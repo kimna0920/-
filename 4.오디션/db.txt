@@ -1,0 +1,35 @@
+create table tbl_artist_201905(
+	artist_id char(4) NOT NULL,
+	artist_name varchar2(20),
+	birth char(8),
+	gender char(1),
+	talent char(1),
+	agency varchar2(30),
+	PRIMARY KEY(artist_id)
+);
+
+insert into tbl_artist_201905 VALUES('AA01', '김스타', '19970101', 'F', '1', 'A엔터데이먼트');
+insert into tbl_artist_201905 VALUES('AA02', '조스타', '19980201', 'M', '2', 'B엔터데이먼트');
+insert into tbl_artist_201905 VALUES('AA03', '왕스타', '19900301', 'M', '3', 'C엔터데이먼트');
+insert into tbl_artist_201905 VALUES('AA04', '정스타', '20000401', 'M', '1', 'D엔터데이먼트');
+insert into tbl_artist_201905 VALUES('AA05', '홍스타', '20010501', 'F', '2', 'A엔터데이먼트');
+
+
+create table tbl_mento_201905(
+	mento_id char(4) NOT NULL,
+	mento_name varchar2(20),
+	PRIMARY KEY(mento_id)
+);
+
+insert into tbl_mento_201905 VALUES('J001', '함멘토');
+insert into tbl_mento_201905 VALUES('J002', '박멘토');
+insert into tbl_mento_201905 VALUES('J003', '장멘토');
+
+
+create table tbl_point_201905(
+	serial_no number(8) NOT NULL,
+	artist_id char(4),
+	mento_id char(4),
+	score number(3),
+	PRIMARY KEY(serial_no)
+);
