@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+header{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	background-color: pink;
+	line-height: 40px;
+	font-size: 25px;
+}
+nav{
+	position: fixed;
+	top: 40px;
+	right: 0px;
+	width: 100%;
+	height: 20px;
+	background-color: light-pink;
+	line-height: 20px;
+	font-size: 14px;
+}
+section{
+	position: fixed;
+	top: 60px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: ligth-gary;
+	line-height: 40px;
+	font-size: 20px;
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	background-color: pink;
+	line-height: 30px;
+	font-size: 30px;
+}

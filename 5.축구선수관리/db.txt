@@ -1,0 +1,70 @@
+create table tbl_player_20221205(
+	player_id char(7) not null,
+	player_name varchar2(20),
+	player_position char(2),
+	player_date varchar2(8),
+	team_id char(3),
+	primary key(player_id)
+);
+insert into tbl_player_20221205 values('2022101', '서무언', 'GK', '20120101', 'K06');
+insert into tbl_player_20221205 values('2022102', '김태영', 'DF', '20120102', 'K00');
+insert into tbl_player_20221205 values('2022103', '박민세', 'DF', '20120103', 'K00');
+insert into tbl_player_20221205 values('2022104', '페르난도', 'FW', '20120104', 'K04');
+insert into tbl_player_20221205 values('2022105', '레오', 'FW', '20120105', 'K03');
+insert into tbl_player_20221205 values('2022106', '실바', 'MF', '20120106', 'K07');
+insert into tbl_player_20221205 values('2022107', '무스타파', 'MF', '20120107', 'K04');
+insert into tbl_player_20221205 values('2022108', '에디', 'MF', '20120108', 'K01');
+insert into tbl_player_20221205 values('2022109', '알리송', 'GK', '20120109', 'K01');
+insert into tbl_player_20221205 values('2022110', '쟈스민', 'MF', '20120110', 'K08');
+insert into tbl_player_20221205 values('2022111', '디디', 'MF', '20120111', 'K06');
+
+create table tbl_stadium_20221205(
+	stadium_id char(3) not null,
+	stadium_name varchar2(30),
+	seat_count number(5),
+	primary key(stadium_id)
+);
+insert into tbl_stadium_20221205 values('000', '없음', 0);
+insert into tbl_stadium_20221205 values('A01', '수원월드컵경기장', 50000);
+insert into tbl_stadium_20221205 values('A02', '부산아시아드경기장', 30000);
+insert into tbl_stadium_20221205 values('A03', '제주월드컵경기장', 40000);
+insert into tbl_stadium_20221205 values('A04', '대구월드컵경기장', 30000);
+insert into tbl_stadium_20221205 values('B01', '인천월드컵경기장', 35000);
+insert into tbl_stadium_20221205 values('B02', '성남종합운동장', 27000);
+insert into tbl_stadium_20221205 values('B03', '서울월드컵경기장', 66000);
+insert into tbl_stadium_20221205 values('C01', '광주월드컵경기장', 40000);
+insert into tbl_stadium_20221205 values('C02', '창원종합운동장', 27000);
+insert into tbl_stadium_20221205 values('C03', '포항스틸야드', 25000);
+insert into tbl_stadium_20221205 values('D01', '광양전용경기장', 20000);
+insert into tbl_stadium_20221205 values('D02', '울산문수경기장', 46000);
+insert into tbl_stadium_20221205 values('D03', '진주월드컵경기장', 28000);
+insert into tbl_stadium_20221205 values('E01', '대전월드컵경기장', 41000);
+insert into tbl_stadium_20221205 values('F01', '대구시민경기장', 33000);
+insert into tbl_stadium_20221205 values('F02', '부산시민경기장', 42000);
+insert into tbl_stadium_20221205 values('F03', '일산경기장', 20000);
+insert into tbl_stadium_20221205 values('F04', '마산경기장', 20000);
+insert into tbl_stadium_20221205 values('F05', '안양경기장', 20000);
+
+create table tbl_team_20221205(
+	team_id char(3) not null,
+	team_name varchar2(30),
+	region_name varchar2(8),
+	stadium_id char(3),
+	primary key(team_id)
+);
+insert into tbl_team_20221205 values('K00', '무소속', '무', '000');
+insert into tbl_team_20221205 values('K01', '울산현대', '울산', 'C04');
+insert into tbl_team_20221205 values('K02', '블루윙즈', '수원', 'B04');
+insert into tbl_team_20221205 values('K03', '스틸러스', '포항', 'C03');
+insert into tbl_team_20221205 values('K04', '유나이티드', '인천', 'B01');
+insert into tbl_team_20221205 values('K05', '현대모터스', '전북', 'D03');
+insert into tbl_team_20221205 values('K06', 'FC부산소마고', '부산', 'C01');
+insert into tbl_team_20221205 values('K07', '드래곤즈', '전남', 'D01');
+insert into tbl_team_20221205 values('K08', '일화천마', '성남', 'B02');
+insert into tbl_team_20221205 values('K09', 'FC서울', '서울', 'B03');
+insert into tbl_team_20221205 values('K10', '시티즌', '대전', 'D02');
+insert into tbl_team_20221205 values('K11', '경남FC', '경남', 'C02');
+insert into tbl_team_20221205 values('K12', '광주상무', '광주', 'A01');
+insert into tbl_team_20221205 values('K13', '강원FC', '강원', 'A02');
+insert into tbl_team_20221205 values('K14', '제주FC', '제주', 'A03');
+insert into tbl_team_20221205 values('K15', '대구FC', '대구', 'A04');
